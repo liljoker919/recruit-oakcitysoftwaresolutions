@@ -18,6 +18,8 @@ a {
     color: inherit;
 }
 
+
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -32,15 +34,22 @@ a {
 }
 
 .navbar ul {
-    list-style: none;
     display: flex;
     gap: 20px;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .navbar li {
     display: inline;
+}
+
+.navbar ul.open {
+    flex-direction: column;
+    gap: 10px;
+    background-color: #1e293b;
+    padding: 10px;
 }
 
 .navbar a {
@@ -206,3 +215,27 @@ section {
         font-size: 0.9rem;
     }
 }
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar ul.open {
+        display: flex;
+    }
+}
+
+/* Responsive Menu */
+.menu-toggle {
+    display: none;
+    background-color: #1e293b;
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
