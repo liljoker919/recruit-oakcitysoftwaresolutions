@@ -9,18 +9,89 @@
 </head>
 
 <body>
-    <header>
-        <h1>Recruit</h1>
-        <p>Helping high school athletes shine.</p>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About the Service</h2>
-            <p>This is a placeholder for the about section.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Oak City Software Solutions</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h1>Recruit - Helping High School Athletes Shine</h1>
+        <p>Professional websites tailored for student-athletes to stand out to recruiters.</p>
+        <button onclick="location.href='#contact'">Get Started</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About the Service</h2>
+        <p>We specialize in creating professional, mobile-friendly websites for high school athletes to showcase their
+            skills and achievements to college recruiters.</p>
+        <ul>
+            <li>Highlight videos</li>
+            <li>Game stats and schedules</li>
+            <li>Contact information</li>
+        </ul>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>Pricing</h2>
+        <p>Choose a package that fits your needs:</p>
+        <div class="pricing-options">
+            <div class="pricing-card">
+                <h3>Basic Package</h3>
+                <p>$500</p>
+                <p>Includes website design, 2 years of hosting, and up to 4 updates per year.</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium Package</h3>
+                <p>$750</p>
+                <p>Includes website design, 2 years of hosting, unlimited updates, and priority support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="faqs">
+        <h2>FAQs</h2>
+        <div class="faq-item">
+            <h3>How long does it take to create the website?</h3>
+            <p>Your website will be ready in 7-10 business days after we receive all the required content.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What do I need to provide?</h3>
+            <p>High-quality photos, video clips, sports stats, and a brief bio.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What happens after the two-year plan ends?</h3>
+            <p>You can renew hosting and maintenance for $150/year.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Ready to get started? Reach out below:</p>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Oak City Software Solutions. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
