@@ -239,3 +239,83 @@ section {
     border: none;
     padding: 10px;
     cursor: pointer;
+}
+
+/* Profile Header */
+.profile-header {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.profile-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.profile-header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Bio Section */
+.profile-bio {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.profile-bio ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+/* Stats Section */
+.profile-stats {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.profile-stats table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 800px;
+}
+
+.profile-stats th,
+.profile-stats td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile-stats th {
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Highlights Section */
+.profile-highlights {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.profile-highlights iframe {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+/* Contact Section */
+.profile-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
