@@ -20,8 +20,10 @@
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-        <ul>
+        <div class="nav-logo">
+            <img src="static/images/logo.png" alt="Oak City Software Solutions Logo" class="hero-logo">
+        </div>
+        <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#pricing">Pricing</a></li>
@@ -29,26 +31,41 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="demo-profile.html">Demo Profile</a></li>
         </ul>
+        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
     </nav>
+
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <h1>Recruit - Helping High School Athletes Shine</h1>
+        <h2>Recruit - Helping High School Athletes Shine</h2>
         <p>Professional websites tailored for student-athletes to stand out to recruiters.</p>
         <button onclick="location.href='#contact'">Get Started</button>
     </section>
 
+
+
+
     <!-- About Section -->
     <section id="about" class="about">
         <h2>About the Service</h2>
-        <p>We specialize in creating professional, mobile-friendly websites for high school athletes to showcase their
-            skills and achievements to college recruiters.</p>
-        <ul>
-            <li>Highlight videos</li>
-            <li>Game stats and schedules</li>
-            <li>Contact information</li>
-        </ul>
+        <p>
+            Our mission is to help high school athletes showcase their talent and achievements through personalized,
+            professional websites.
+            Designed specifically for college recruiting, these websites provide coaches and recruiters with easy access
+            to your highlights, stats, and contact information.
+        </p>
+        <div class="about-details">
+            <ul>
+                <li><strong>Highlight Videos:</strong> Share your best plays and game highlights in one place.</li>
+                <li><strong>Stats and Achievements:</strong> Display your performance metrics, awards, and recognitions.
+                </li>
+                <li><strong>Coach Contact:</strong> Provide your contact details and links for recruiters to reach you
+                    easily.</li>
+                <li><strong>Custom Design:</strong> Tailored to reflect your personality and athletic journey.</li>
+            </ul>
+        </div>
     </section>
+    >
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">

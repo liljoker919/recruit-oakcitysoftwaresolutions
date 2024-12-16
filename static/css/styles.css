@@ -38,9 +38,10 @@ a {
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-blue-color);
+    background-color: #ffffff;
+    /* White background */
     padding: 15px 20px;
     position: sticky;
     top: 0;
@@ -48,105 +49,112 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar ul {
+.nav-logo img {
+    height: 40px;
+    /* Adjust logo size */
+}
+
+.nav-links {
     display: flex;
-    gap: 20px;
     list-style: none;
-    padding: 0;
+    gap: 20px;
     margin: 0;
+    padding: 0;
 }
 
 .navbar a {
-    color: white;
+    color: #333333;
+    /* Dark text color for contrast */
     font-size: 16px;
     font-weight: bold;
 }
 
 .navbar a:hover {
-    color: var(--accent-orange-color);
+    color: #0077b6;
+    /* Accent hover color */
 }
 
-.hero {
-    position: relative;
-    background: url('assets/images/soccer-training-7091430_1920.jpg') no-repeat center center/cover;
+.menu-toggle {
+    display: none;
+    /* Hide toggle button by default */
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-    .hero {
-        background: url('assets/images/soccer-training-7091430_1024.jpg') no-repeat center center/cover;
-    }
-}
-
+/* Responsive Navigation */
 @media (max-width: 768px) {
-    .hero {
-        background: url('assets/images/soccer-training-7091430_768.jpg') no-repeat center center/cover;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #0077b6;
+        padding: 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Show toggle for mobile */
     }
 }
 
-@media (max-width: 480px) {
-    .hero {
-        background: url('assets/images/soccer-training-7091430_480.jpg') no-repeat center center/cover;
-    }
-}
 
+/* Hero Section */
 .hero {
-    height: 100vh;
-    /* Full viewport height */
-    color: white;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow: hidden;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* Adds a dark overlay for readability */
-    z-index: 1;
+    background-color: #1e293b;
+    /* Dark background */
+    color: #ffffff;
+    /* White text for contrast */
+    padding: 3rem 1rem;
 }
 
 .hero-content {
-    background-color: var(--cta-button-blue-color);
-    z-index: 2;
     max-width: 800px;
+    margin: 0 auto;
 }
 
-.hero h1 {
+.hero-logo {
+    max-width: 200px;
+    /* Logo size */
+    margin-bottom: 1.5rem;
+}
+
+.hero h2 {
     font-size: 2.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
 }
 
 .cta-button {
-    background-color: #0077b6;
-    color: white;
+    display: inline-block;
+    background-color: var(--accent-orange-color);
+    /* Orange CTA */
+    color: #fff;
     padding: 10px 20px;
-    text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
+    text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: var(--cta-button-hover-color);
+    background-color: var(--hover-orange-color);
+    /* Darker orange on hover */
 }
+
 
 /* Section Styles */
 section {
@@ -155,33 +163,131 @@ section {
     background-color: var(--light-gray-background-color);
 }
 
-.about,
+/* About Section */
+.about {
+    background-color: #ffffff;
+    /* White background for clarity */
+    color: #333333;
+    /* Text color for readability */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    color: #0077b6;
+    /* Primary blue (logo color) */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin: 0 auto 30px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.about-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-details li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #1e293b;
+    /* Dark blue (logo color) */
+    line-height: 1.5;
+}
+
+.about-details strong {
+    color: #f0ad4e;
+    /* Accent orange for emphasis */
+}
+
 .faqs {
     background-color: var(--background-color);
 }
 
 /* Pricing Section */
 .pricing {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #f4f4f4;
+    /* Light gray background for the section */
+    color: #1e293b;
+    /* Dark blue text color */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.pricing h2 {
+    color: #0077b6;
+    /* Primary blue from logo */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.pricing p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #333333;
+}
+
+.pricing-options {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    /* Adds space between the cards */
+    flex-wrap: wrap;
+    /* Ensures responsiveness */
+    margin-top: 20px;
 }
 
 .pricing-card {
-    border: 1px solid var(--primary-color);
+    background-color: #ffffff;
+    /* White background for cards */
+    border: 2px solid #0077b6;
+    /* Primary blue border */
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 280px;
+    width: 300px;
     text-align: center;
-    background-color: var(--accent-orange-color);
-    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* FAQs Section */
-.faq-item {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto 20px;
+.pricing-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #1e293b;
+    /* Dark blue from the logo */
 }
+
+.pricing-card p {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card:nth-child(1) {
+    border-top: 8px solid #f0ad4e;
+    /* Accent orange for the Basic Package */
+}
+
+.pricing-card:nth-child(2) {
+    border-top: 8px solid #0077b6;
+    /* Primary blue for the Premium Package */
+}
+
 
 /* Contact Section */
 .contact button {
@@ -207,19 +313,7 @@ section {
     font-size: 14px;
 }
 
-/* Profile Header */
-.profile-header {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
 
-/* Highlights Section */
-.profile-highlights {
-    background-color: var(--background-color);
-    padding: 40px 20px;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -242,46 +336,144 @@ section {
     }
 }
 
-/* Footer */
-.footer {
-    background-color: var(--primary-color);
-    color: white;
+/* ============================================= */
+/* Athlete Profile Styles                        */
+/* ============================================= */
+
+/* Profile Header */
+.profile-header {
+    background-color: var(--primary-blue-color);
+    color: #fff;
     text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid var(--accent-orange-color);
+}
+
+.profile-info h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--accent-orange-color);
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+    color: #fff;
+}
+
+/* Bio Section */
+.profile-bio {
+    background-color: var(--light-gray-background-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.profile-bio h2 {
+    color: var(--primary-blue-color);
+    margin-bottom: 20px;
+}
+
+.profile-bio ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.profile-bio li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Performance Stats */
+.profile-stats {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.profile-stats table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.profile-stats th,
+.profile-stats td {
+    border: 1px solid #ddd;
     padding: 10px;
-    font-size: 14px;
+    text-align: center;
 }
 
-/* Profile Header */
-.profile-header {
-    background-color: var(--primary-color);
+.profile-stats th {
+    background-color: var(--primary-blue-color);
     color: white;
-    text-align: center;
-    padding: 50px 20px;
+}
+
+.profile-stats td {
+    background-color: white;
 }
 
 /* Highlights Section */
 .profile-highlights {
-    background-color: var(--background-color);
     padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
+.profile-highlights iframe {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    border: none;
+}
 
-    .hero p {
-        font-size: 1rem;
-    }
+/* Contact Section */
+.profile-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
 
-    .pricing-options {
-        flex-direction: column;
-        gap: 15px;
-    }
+.profile-contact input,
+.profile-contact textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+.profile-contact button {
+    background-color: var(--accent-orange-color);
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-contact button:hover {
+    background-color: var(--hover-orange-color);
 }
