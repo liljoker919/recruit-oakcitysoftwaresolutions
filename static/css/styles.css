@@ -1,0 +1,287 @@
+/* Define theme colors */
+:root {
+    --primary-blue-color: #4682A8;
+    /* Blue from logo */
+    --accent-orange-color: #F9A73E;
+    /* Orange/gold from logo */
+    --light-gray-background-color: #F4F4F4;
+    /* Light gray */
+    --dark-gray-text-color: #333;
+    /* Dark gray for text */
+    --cta-button-hover-color: #005f8a;
+    /* Blue for CTA button */
+    --hover-orange-color: #D98733;
+    /* Slightly darker orange for hover state */
+}
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--dark-gray-text-color);
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-blue-color);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--accent-orange-color);
+}
+
+.hero {
+    position: relative;
+    background: url('assets/images/soccer-training-7091430_1920.jpg') no-repeat center center/cover;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        background: url('assets/images/soccer-training-7091430_1024.jpg') no-repeat center center/cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background: url('assets/images/soccer-training-7091430_768.jpg') no-repeat center center/cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        background: url('assets/images/soccer-training-7091430_480.jpg') no-repeat center center/cover;
+    }
+}
+
+.hero {
+    height: 100vh;
+    /* Full viewport height */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adds a dark overlay for readability */
+    z-index: 1;
+}
+
+.hero-content {
+    background-color: var(--cta-button-blue-color);
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.cta-button {
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--cta-button-hover-color);
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--light-gray-background-color);
+}
+
+.about,
+.faqs {
+    background-color: var(--background-color);
+}
+
+/* Pricing Section */
+.pricing {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.pricing-card {
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    background-color: var(--accent-orange-color);
+    color: white;
+}
+
+/* FAQs Section */
+.faq-item {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+/* Contact Section */
+.contact button {
+    background-color: var(--accent-orange-color);
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact button:hover {
+    background-color: var(--hover-orange-color);
+    /* Slightly darker orange */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Profile Header */
+.profile-header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Highlights Section */
+.profile-highlights {
+    background-color: var(--background-color);
+    padding: 40px 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .pricing-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Profile Header */
+.profile-header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Highlights Section */
+.profile-highlights {
+    background-color: var(--background-color);
+    padding: 40px 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .pricing-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
