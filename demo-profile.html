@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo Athlete Profile - Recruit</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./static/css/styles.css">
+
+
+
+
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMXX35TY36"></script>
@@ -18,11 +22,16 @@
 </script>
 
 <body>
-    <!-- Header Section -->
     <header class="profile-header">
-        <h1>Jane Doe</h1>
-        <p>Soccer Forward | Class of 2025</p>
+        <div class="profile-container">
+            <img src="./static/images/profile-picture.jpg" alt="Jane Doe" class="profile-pic">
+            <div class="profile-info">
+                <h1>Jane Doe</h1>
+                <p>Forward | Jersey #10 | Class of 2025</p>
+            </div>
+        </div>
     </header>
+
 
     <!-- Bio Section -->
     <section id="bio" class="profile-bio">
@@ -34,7 +43,7 @@
             <li>School: City High School</li>
             <li>GPA: 4.3</li>
             <li>Height: 5'8"</li>
-            <li>Weight: 115 lbs</li>
+
         </ul>
     </section>
 
@@ -73,12 +82,15 @@
     <!-- Highlights Section -->
     <section id="highlights" class="profile-highlights">
         <!-- Highlights Section -->
+        <!-- Highlights Section -->
         <section id="highlights" class="profile-highlights">
             <h2>Highlights Video</h2>
             <p>Watch my top highlights from the last season:</p>
-            <iframe src='https://www.hudl.com/embed/video/3/18676882/659b35a8b3c9c90638989f3f' width='640' height='360'
-                frameborder='0' allowfullscreen></iframe>
+            <iframe src="https://www.hudl.com/embed/video/2QzThg" frameborder="0" allowfullscreen
+                title="Highlights Video">
+            </iframe>
         </section>
+
 
     </section>
 
